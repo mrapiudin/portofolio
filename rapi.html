@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INI PUNYA PIUN</title>
+    <link rel="stylesheet" href="rapi.css">
+    <link rel="stylesheet" href="respon.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span style="color:  rgb(99, 66, 0);">MRA</span><span style="color: rgb(205, 156, 65);">PII</span></a>
+
+        <nav class="navbar">
+        <a href="#satu.html">Home</a>
+        <a href="#dua.html">About</a>
+        <a href="#tiga.html">Contact</a>
+        <a href="#empat.html">Project</a>
+        </nav>
+        <a href="#" id="burger"><i class='bx bx-menu'></i></a>
+    </header>
+    <section class="home" id="satu.html">
+        <div class="home-content">
+            <h1>Hi I'm Muhammad Rapiudin</h1>
+            <h3>I'm Full stack Developer</h3>
+            <p>Now I am studying at Wikrama  Vocational High School and my major is Software and Game Development</p>
+            <div class="btn-box">
+                <a href="Blue Simple Professional CV Resume.png" download>My CV</a>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=DmwnWrRmTwvhSBggmNSJqlzXpclrCXKqBPhBRCznHZdPdXrhSlTpxFlklCkHrmdVcQFlMkncsQwb">Let's Talk</a>
+            </div>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.instagram.com/rapi1023_/"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.linkedin.com/in/muhammad-rapiudin-1171a2299/"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://github.com/mrapiudin"><i class='bx bxl-github'></i></a>
+        </div>
+        </div>
+        <div class="contaner">
+            <img src="asik.png">
+        </div>
+    </section>
+
+    <article class="rumah" id="dua.html">
+        <h1>About me</h1>
+        <h3>It's me</h3>
+        <div class="atap">
+            <img src="Pas Photo_Muhammad Rapiudin_0072369085.jpg" alt="">
+        </div>
+
+        <div class="isi">
+            <p>Saya seorang pelajar dengan fokus pada pembelajaran pemerograman. Saya pekerja keras, dapat bekerja sama, disiplin, dan siap menerima beberapa kritik untuk membuat diri saya lebih berkembang. Saya memiliki minat dalam karir sebagai full stack web developer, Namun saya memiliki ketertarkan lebih dan ingin belajar lebih tentang backend developer.</p>
+            <div class="skil">
+                <h1>Skil</h1>
+                <ul>
+                    <li><i class='bx bxl-css3' ></i>CSS</li>
+                    <li>- Tailwind</li>
+                    <li>- bootstrap</li>
+                    <li><i class='bx bxl-html5'></i>HTML</li>
+                    <li><i class='bx bxl-javascript'></i>Java Script</li>
+                </ul>
+            </div>
+            <div class="Other">
+                <h1>Other</h1>
+                <ul>
+                    <li>PHP</li>
+                    <li>- Laravel </li>
+                    <li>Golang</li>
+                    <li>- Gin</li>
+                    <li>First aid</li>
+                    <li>Fotografi</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+    <aside class="imah" id="tiga.html">
+        <h1 class="ab">Contact</h1>
+        <h3 class="cd">Porto folio</h3>
+
+        <div class="kenteng">
+                <div class="kotak">
+                    <h1>About</h1>
+                    <h4>Name :</h4>
+                    <p>Muhammad Rapiudin</p>
+                    <h4>Date of Birth :</h4>
+                    <p>22 October 2007</p>
+                    <h4>Hobby :</h4>
+                    <p>Swiming dan crate fiction stories</p>
+                </div>
+                <div class="bulet">
+                    <h1>Certificate</h1>
+                    <a href="https://www.linkedin.com/in/muhammad-rapiudin-1171a2299/">More Here</a>
+                </div>
+                <div class="persegi">
+                    <h1>Education</h1>
+                    <h4>Educational background :</h4>
+                    <p>SDN Cisalada 01</p>
+                    <p>2014-2020</p>
+                    <p>SMPN 1 Cigombong</p>
+                    <p>2020-2023</p>
+                    <p>SMK Wikrama bogor</p>
+                    <p>2023-2026</p>
+                </div>
+        </div>
+    </aside>
+
+    <main id="empat.html">
+        <h1>MEMORY</h1>
+        <h3>GAMESS</h3>
+        <div id="memory-game"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = [
+      '1.jpg',
+      '1.jpg',
+      '2.jpg',
+      '2.jpg',
+      '3.jpg',
+      '3.jpg',
+      '4.jpg',
+      '4.jpg',
+      '5.jpg',
+      '5.jpg',
+      '6.jpg',
+      '6.jpg',
+      '7.jpg',
+      '7.jpg',
+      '8.jpg',
+      '8.jpg',
+    ];
+    let flippedCards = [];
+    let matchedCards = [];
+
+    const memoryGame = document.getElementById('memory-game');
+
+    // Shuffle the cards
+    cards.sort(() => Math.random() - 0.5);
+
+    // Create card elements
+    cards.forEach((card, index) => {
+      const cardElement = document.createElement('div');
+      cardElement.classList.add('card');
+      cardElement.dataset.card = card;
+      cardElement.dataset.index = index;
+
+      const cardInner = document.createElement('div');
+      cardInner.classList.add('card-inner');
+
+      const cardFront = document.createElement('div');
+      cardFront.classList.add('card-face', 'card-front');
+      cardFront.textContent = ' ';
+
+      const cardBack = document.createElement('div');
+      cardBack.classList.add('card-face', 'card-back');
+      cardBack.style.backgroundImage = `url('${card}')`;
+
+      cardInner.appendChild(cardFront);
+      cardInner.appendChild(cardBack);
+      cardElement.appendChild(cardInner);
+
+      cardElement.addEventListener('click', () => flipCard(cardElement));
+      memoryGame.appendChild(cardElement);
+    });
+
+    function flipCard(card) {
+      card.classList.toggle('flipped');
+      flippedCards.push(card);
+
+      if (flippedCards.length === 2) {
+        setTimeout(checkMatch, 500);
+      }
+    }
+
+    function checkMatch() {
+      const [card1, card2] = flippedCards;
+
+      if (card1.dataset.card === card2.dataset.card) {
+        matchedCards.push(card1, card2);
+        if (matchedCards.length === cards.length) {
+          alert('Keren banget kamuu bebb.');
+        }
+      } else {
+        card1.classList.remove('flipped');
+        card2.classList.remove('flipped');
+      }
+
+      flippedCards = [];
+    }
+  });
+</script>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1><span style="color: rgb(216, 179, 110);">MRA</span><span style="color: rgb(142, 108, 41);">PII</span></h1>
+            </div>
+            <div class="footer-info">
+                <p>Alamat: JL. CISALADA NO. O1 DS. CISALADA KEC. CIGOMBONG KAB. BOGOR.</p>
+                <p>Email: mrapi8417@gmail.com</p>
+                <p>Telepon: +62-857-805-964-04</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Muhammad Rapiudin. </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
