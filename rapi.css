@@ -544,12 +544,11 @@ main h3 {
     grid-template-columns: repeat(4, 110px);
     gap: 15px;
     position: relative;
-    margin-top: 40px;
     justify-content: center;
 }
 
 .card {
-    width: 93px;
+    width: 90px;
     height: 93px;
     perspective: 1000px;
     cursor: pointer;
